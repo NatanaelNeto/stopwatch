@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Stopwatch</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<link rel="icon" href="icon.png">
+	<script type="text/javascript" src="js.js"></script>
+</head>
+<body id="body" onload="show();" onkeydown="resetSpace()" onkeyup="startSpace()">
+	<div id="popUp" class="popUpCard right">
+		<input id="xRight" type="button" class="btn mini" value="X" onclick="helpPage()">
+		<h2>Ajuda</h2>
+		<p>Verifique se o botão de trava não está travado;</p>
+		<p>Embaralhe seu cubo mágico;</p>
+		<p>Analise seu cubo mágico sem resolvê-lo;</p>
+		<p>Apoie suas mãos na barra de espaço. Atenção, após você tirar a mão, o relógio já irá contar;</p>
+		<p>Ao tirar a mão, resolva o cubo mágico no menor tempo possível;</p>
+		<p>Ao concluir, aperte novamente a barra de espaço. Não é necessário segurar;</p>
+		<p>Para marcar seu resultado, selecione o tipo de cubo mágico que você usou em <i>Tipo</i>;</p>
+		<p>Após selecionar, clique em marcar. O resultado aparecerá na tela;</p>
+		<div class="profile">Desenvolvido por <a href="https://natanaelneto.github.io/natanaelneto/" target="_blank">Natanael Neto</a>.</div>
+	</div>
+
+	<div id="popUpLeft" class="popUpCard left">
+			<input id="xLeft" type="button" class="btn mini" value="X" onclick="savePage()">
+			<input id="downBtn" type="button" class="btn down" value="download" onclick="download('Resultados')">
+			<h2>Marcações</h2>
+			<div id="saveThisText"></div>
+	</div>
+	<div id="conteudo" class="container">
+		<h1>Timer para Cubo Mágico</h1>
+		<div><span id="time"></span></div>
+		<input id="btn" class="btn" type="button" value="Travar" onclick="toggleStop()">
+		<input id="saveBtn" class="btn" type="button" value="Marcar" onclick="saveResult(x,typeOf)">
+		<input id="saveBtnPage" class="btn" type="button" value="Marcações" onclick="savePage()">
+		<input id="helpBtn" class="btn" type="button" value="Ajuda" onclick="helpPage()">
+		<div id="spanType">Tipo de cubo mágico</div>
+		<div class="dropdown">
+
+			<input class="btn" type="button" value="Tipo" onclick="showMenu()">
+			<div id="dropDown" class="dropdown-content">
+				<ul>
+					<li onclick="typeOfFunct('Cubo 2x2x2')">Cubo 2x2x2</li>
+					<li onclick="typeOfFunct('Cubo 3x3x3')">Cubo 3x3x3</li>
+					<li onclick="typeOfFunct('Pyraminx')">Pyraminx</li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	<footer>Desenvolvido por <a href="https://natanaelneto.github.io/natanaelneto/" target="_blank">Natanael Neto</a>.</footer>
+	
+</body>
+</html>

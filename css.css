@@ -1,0 +1,238 @@
+html, body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	background-color: #333;
+	color: white;
+	overflow: hidden;
+}
+
+.container {
+	margin: 0 auto;
+	width: 960px;
+	text-align: center;
+}
+
+div {
+	margin:20px 0px;
+	font-size: 96px;
+}
+
+.btn{
+	display: inline-block;
+	margin: 0 auto;
+	margin-bottom: 12px;
+	width: 200px;
+	height: 40px;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+	background-color: #8CBA80;
+	color: white;
+	border-color: black;
+	border: none;
+	border-radius: 4px;
+	transition: 0.4s ease;
+}
+
+.btn.mini {
+	width: 60px;
+	position: absolute;
+	margin: 0 auto;
+	right: 30px;
+	margin: 30px;
+	font-weight: bold;
+}
+
+.btn.mini:hover{
+	letter-spacing: normal;
+}
+
+.btn.down {
+	width: 120px;
+	position: absolute;
+	margin: 0 auto;
+	right: 0;
+	top: 50px;
+	height: 30px;
+	padding-top: 5px;
+	font-size: 14px;
+	margin: 30px;
+	font-weight: bold;
+	background-color: rgb(48, 150, 211);
+}
+
+.btn.down:hover{
+	letter-spacing: normal;
+	border: 3px solid rgb(48, 150, 211);
+	background-color: rgba(30,30,36,1);
+}
+
+.btn:focus{
+	outline: none;
+}
+
+.btn:hover{
+	letter-spacing: 3px;
+	border: 3px solid #CACF85;
+	background-color: rgba(30,36,32,1);
+}
+
+.btn[value = "Travado"]{
+	background-color: rgb(211, 67, 48);
+}
+
+.btn:hover[value = "Travado"]{
+	border: 3px solid rgb(241, 100, 75);
+	background-color: rgba(36,30,30,1);
+	
+}
+
+.btn[value = "Tipo"]{
+	background-color: rgb(48, 150, 211);
+	margin: 0 auto;
+	z-index: 10 !important;
+}
+.btn:hover[value = "Tipo"]{
+	border: 3px solid rgb(48, 150, 211);
+	background-color: rgba(30,30,36,1);
+	
+}
+
+.dropdown{
+	overflow: hidden;
+}
+.dropdown-content{
+	font-size: 18px;
+	line-height: 35px;
+	margin: 0 auto;
+	transition: 0.4s all ease;
+	height: 70px;
+	width: 200px;
+	overflow-y: scroll;
+}
+.dropdown-content ul{
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+}
+.dropdown-content ul li{
+	cursor: pointer;
+	margin: 0 auto;
+	height: 35px;
+	width: 186px;
+	background-color: rgba(30,30,36,1);
+	border-bottom: 1px solid rgb(48, 150, 211);
+	transition: 0.4s all ease;
+}
+.dropdown-content ul li:hover{
+	background-color: rgb(48, 150, 211);	
+}
+
+.dropdown-content{
+	position: relative;
+	top:-90px;
+	opacity: 0;
+	visibility: hidden;
+}
+
+h1 {
+	font-size: 60px;
+}
+h2{
+	font-size: 48px;
+}
+p{
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.popUpCard {
+	-webkit-box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.5);
+	position: absolute;
+	margin: 0 auto;
+	transform: translate(0, -50%);
+	width: 30%;
+	height: 500px;
+	min-width: 200px;
+	background-color: rgb(230, 242, 252);
+	transition: 0.4s ease;
+	z-index: 1;
+	padding: 0 30px;
+	overflow-y: scroll;
+}
+
+.popUpCard{
+	color: #333;
+}
+
+.popUpCard.right {
+	right: 0;
+	top: 50%;
+	right: -50%;
+	border-radius: 30px 0 0 30px;
+}
+.popUpCard.left {
+	left: 0;
+	top: 50%;
+	left: -50%;
+	border-radius: 0 30px 30px 0;
+}
+
+.popUpCard .profile {
+	font-size: 14px;
+}
+
+.popUpCard .profile a{
+	font-style: italic;
+	color: #333;
+	text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0.05);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #8CBA80; 
+    border-radius: 10px;
+}
+
+.dropdown-content::-webkit-scrollbar-thumb{
+	background: rgb(48, 150, 211);
+}
+
+div #spanType{
+	position: relative;
+	margin: 60px 0px -80px 0px;
+	font-size: 14px;
+	color: white;
+}
+
+footer{
+	position: fixed;
+	bottom: 0px;
+	color: white;
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+footer a{
+	color: white;
+	font-style: italic;
+	text-decoration: none;
+	transition: 0.4s ease;
+}
+footer a:hover{
+	letter-spacing: 0.05em;
+}
