@@ -48,18 +48,18 @@ var	clsStopwatch = function() {
 			};
 	};
 
-var x = new clsStopwatch();
-var $time;
-var clocktimer;
+let x = new clsStopwatch();
+let $time;
+let clocktimer;
 
 function pad(num, size) {
-	var s = "0000" + num;
+	let s = "0000" + num;
 	return s.substr(s.length - size);
 }
 
 function formatTime(time) {
-	var h = m = s = ms = 0;
-	var newTime = '';
+	let h = m = s = ms = 0;
+	let newTime = '';
 
 	h = Math.floor( time / (60 * 60 * 1000) );
 	time = time % (60 * 60 * 1000);
@@ -91,7 +91,7 @@ function stop() {
 	clearInterval(clocktimer);
 }
 
-var tS = 0;	//0 - Não Travado
+let tS = 0;	//0 - Não Travado
 			//1 - Travado
 function toggleStop(){
 	if(tS === 0){
@@ -118,7 +118,7 @@ function reset() {
 		state = 0;
 	}
 }
-var state = 0; 	//0 = Cronometro parado;
+let state = 0; 	//0 = Cronometro parado;
 				//1 = rodando;
 				//2 = parado, mostrando resultado;
 function resetSpace() {
@@ -152,7 +152,7 @@ function startSpace() {
 	}
 }
 
-var showPopUpRight = false;
+let showPopUpRight = false;
 function helpPage(){
 	if(!(event.keyCode === 32 || event.which === 32)){
 		document.getElementById("helpBtn").blur();
@@ -172,7 +172,7 @@ function helpPage(){
 	}
 }
 
-var showPopUpLeft = false;
+let showPopUpLeft = false;
 function savePage(){
 	if(!(event.keyCode === 32 || event.which === 32)){
 		document.getElementById("saveBtnPage").blur();
@@ -193,34 +193,29 @@ function savePage(){
 	}
 }
 
-var typeOf = "Não Identificado";
-var mS = false;
-function showMenu(){
-	if(!mS){
-		mS = true;
-		document.getElementById("dropDown").style.visibility = "visible";
-		document.getElementById("dropDown").style.opacity = "1";
-		document.getElementById("dropDown").style.top = "-10px";
-	}
-	else{
-		mS = false;
-		document.getElementById("dropDown").style.visibility = "hidden";
-		document.getElementById("dropDown").style.opacity = "0";
-		document.getElementById("dropDown").style.top = "-105px";
-	}
-}
+let typeOf = "Não Identificado";
+const OPTIONS = ['2x2x2', '3x3x3', '4x4x4', 'Pyraminx', '2x2x2 Time Machine'];
+let pos = 0;
+
+document.getElementById('changeTypeBtn').addEventListener('click', (e) => {
+  e.target.value = OPTIONS[pos];
+  typeOfFunct(e.target.value);
+  if(pos > OPTIONS.length - 2) {
+    pos = 0;
+    return;
+  }
+  pos += 1;
+});
 
 function typeOfFunct(typeOfThis){
 	typeOf = typeOfThis;
-	document.getElementById("spanType").textContent = typeOf;
-	console.log(typeOf);
-	showMenu();
 }
-var innerCounter = 1;
+
+let innerCounter = 1;
 
 function saveResult(timeOf,typeOfThis){
 	if(!(showPopUpLeft||showPopUpRight)){
-		var div = document.createElement("p");
+		let div = document.createElement("p");
 		div.innerHTML =innerCounter + ". Tempo: " + formatTime(x.time()) + " com " + typeOf + "\n";
 		document.getElementById("saveThisText").appendChild(div);
 		innerCounter++;
@@ -228,8 +223,8 @@ function saveResult(timeOf,typeOfThis){
 }
 
 function download(filename) {
-	var resultsOf = document.getElementById("saveThisText").textContent;
-	var element = document.createElement('a');
+	let resultsOf = document.getElementById("saveThisText").textContent;
+	let element = document.createElement('a');
 	element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(resultsOf));
 	element.setAttribute('download', filename);
   

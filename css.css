@@ -1,9 +1,10 @@
 html, body {
 	margin: 0;
-	font-family: 'Roboto', sans-serif;
-	background-color: #333;
+	font-family: 'Oswald', sans-serif;
+	background-color: #111;
 	color: white;
 	overflow: hidden;
+  font-size: 32px;
 }
 
 .container {
@@ -27,10 +28,9 @@ div {
 	text-transform: uppercase;
 	font-family: 'Roboto', sans-serif;
 	background-color: #8CBA80;
-	color: white;
+	color: #111;
 	border-color: black;
 	border: none;
-	border-radius: 4px;
 	transition: 0.4s ease;
 }
 
@@ -72,7 +72,7 @@ div {
 }
 
 .btn:hover{
-	letter-spacing: 3px;
+  color: white;
 	border: 3px solid #CACF85;
 	background-color: rgba(30,36,32,1);
 }
@@ -87,12 +87,10 @@ div {
 	
 }
 
-.btn[value = "Tipo"]{
+.btn.btn-tipo{
 	background-color: rgb(48, 150, 211);
-	margin: 0 auto;
-	z-index: 10 !important;
 }
-.btn:hover[value = "Tipo"]{
+.btn.btn-tipo:hover{
 	border: 3px solid rgb(48, 150, 211);
 	background-color: rgba(30,30,36,1);
 	
@@ -136,20 +134,26 @@ div {
 }
 
 h1 {
-	font-size: 60px;
+	font-family: 'Yantramanav', sans-serif;
+  font-weight: 100;
+  font-size: 125px;
 }
+
 h2{
 	font-size: 48px;
 }
+
 p{
-	font-size: 18px;
-	line-height: 20px;
+	font-size: 25px;
+  margin: 10px 0;
+}
+
+span {
+  font-size: 64px;
+  letter-spacing: 0.25em;
 }
 
 .popUpCard {
-	-webkit-box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.5);
-	-moz-box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.5);
-	box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.5);
 	position: absolute;
 	margin: 0 auto;
 	transform: translate(0, -50%);
@@ -171,13 +175,11 @@ p{
 	right: 0;
 	top: 50%;
 	right: -50%;
-	border-radius: 30px 0 0 30px;
 }
 .popUpCard.left {
 	left: 0;
 	top: 50%;
 	left: -50%;
-	border-radius: 0 30px 30px 0;
 }
 
 .popUpCard .profile {
@@ -203,7 +205,6 @@ p{
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #8CBA80; 
-    border-radius: 10px;
 }
 
 .dropdown-content::-webkit-scrollbar-thumb{
@@ -212,8 +213,8 @@ p{
 
 div #spanType{
 	position: relative;
-	margin: 60px 0px -80px 0px;
-	font-size: 14px;
+	margin: 40px 0px -80px 0px;
+	font-size: 18px;
 	color: white;
 }
 
@@ -234,5 +235,5 @@ footer a{
 	transition: 0.4s ease;
 }
 footer a:hover{
-	letter-spacing: 0.05em;
+	color: #83449c;
 }

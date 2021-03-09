@@ -4,8 +4,10 @@
 	<meta charset="UTF-8">
 	<title>Stopwatch</title>
 	<link rel="stylesheet" type="text/css" href="css.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Yantramanav:wght@100&display=swap" rel="stylesheet">
 	<link rel="icon" href="icon.png">
-	<script type="text/javascript" src="js.js"></script>
+	<script type="text/javascript" src="js.js" defer></script>
 </head>
 <body id="body" onload="show();" onkeydown="resetSpace()" onkeyup="startSpace()">
 	<div id="popUp" class="popUpCard right">
@@ -29,24 +31,16 @@
 			<div id="saveThisText"></div>
 	</div>
 	<div id="conteudo" class="container">
-		<h1>Timer para Cubo Mágico</h1>
+		<h1>TIMER</h1>
 		<div><span id="time"></span></div>
-		<input id="btn" class="btn" type="button" value="Travar" onclick="toggleStop()">
-		<input id="saveBtn" class="btn" type="button" value="Marcar" onclick="saveResult(x,typeOf)">
-		<input id="saveBtnPage" class="btn" type="button" value="Marcações" onclick="savePage()">
-		<input id="helpBtn" class="btn" type="button" value="Ajuda" onclick="helpPage()">
-		<div id="spanType">Tipo de cubo mágico</div>
-		<div class="dropdown">
+    <div class="div-menu">
 
-			<input class="btn" type="button" value="Tipo" onclick="showMenu()">
-			<div id="dropDown" class="dropdown-content">
-				<ul>
-					<li onclick="typeOfFunct('Cubo 2x2x2')">Cubo 2x2x2</li>
-					<li onclick="typeOfFunct('Cubo 3x3x3')">Cubo 3x3x3</li>
-					<li onclick="typeOfFunct('Pyraminx')">Pyraminx</li>
-				</ul>
-			</div>
-		</div>
+      <input id="btn" class="btn" type="button" value="Travar" onclick="toggleStop()">
+      <input id="saveBtn" class="btn" type="button" value="Marcar" onclick="saveResult(x,typeOf)">
+      <input id="saveBtnPage" class="btn" type="button" value="Marcações" onclick="savePage()">
+      <input id="helpBtn" class="btn" type="button" value="Ajuda" onclick="helpPage()">
+      <input class="btn btn-tipo" type="button" value="Tipo" id="changeTypeBtn">
+    </div>
 		
 	</div>
 	<footer>Desenvolvido por <a href="https://natanaelneto.github.io/natanaelneto/" target="_blank">Natanael Neto</a>.</footer>
